@@ -1,13 +1,6 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
-def home(response):
-    return HttpResponse("Hello, world!")
-
-
-def about(response):
-    return HttpResponse("Welcome to About page")
-
-
-def contact(response):
-    return HttpResponse("Welcome to Contact page")
+def index(request):
+    return render(request, "website/index.html")
