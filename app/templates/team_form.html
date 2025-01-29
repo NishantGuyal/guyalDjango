@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Teams Page
+{% endblock title %}
+    
+{% block content %}
+    <h1 class="bg-purple-400 text-3xl m-10 p-3">Teams Form App</h1>
+    <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Search</button>
+    </form>
+{% endblock %}
